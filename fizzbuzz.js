@@ -1,6 +1,9 @@
 function whatToSay(sequence){
+  if(sequence===15) return 'FizzBuzz'
+  
   if(sequence%3===0) return 'Fizz'
   if(sequence%5===0) return 'Buzz'
+
   return `${sequence}`
 }
 console.assert(whatToSay(5)==='Buzz', '第五个同学应该说Buzz')
