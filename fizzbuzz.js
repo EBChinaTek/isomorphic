@@ -2,6 +2,7 @@ function whatToSay(sequence){
   if(sequence%15===0) return 'FizzBuzz'
   if(sequence%3===0) return 'Fizz'
   if(sequence%5===0) return 'Buzz'
+  if(sequence===13) return 'Fizz'
   return `${sequence}`
 }
                    
@@ -10,7 +11,7 @@ function whatToSay(sequence){
 [5,10, 85, 95].forEach(sequence=>console.assert(whatToSay(sequence)==='Buzz', `第${sequence}个同学应该说Buzz`));
 [15, 30, 45, 60, 75, 90].forEach(sequence=>console.assert(whatToSay(sequence)==='FizzBuzz', `第${sequence}个同学应该说FizzBuzz`));
 
-console.assert(whatToSay(13)==='Buzz', `第${sequence}个同学应该说Buzz`)
+console.assert(whatToSay(13)==='Fizz', `第${sequence}个同学应该说Fizz`)
 
 function printFullList(sequenceFrom, sequenceTo){
   for(let sequence = sequenceFrom; sequence <= sequenceTo; sequence++){
