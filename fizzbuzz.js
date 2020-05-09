@@ -11,7 +11,8 @@ function whatToSay(sequence){
 [5,10, 85, 95].forEach(sequence=>console.assert(whatToSay(sequence)==='Buzz', `第${sequence}个同学应该说Buzz`));
 [15, 30, 45, 60, 75, 90].forEach(sequence=>console.assert(whatToSay(sequence)==='FizzBuzz', `第${sequence}个同学应该说FizzBuzz`));
 
-console.assert(whatToSay(13)==='Fizz', `第${sequence}个同学应该说Fizz`)
+console.assert(whatToSay(13)==='Fizz', `第${sequence}个同学应该说Fizz`);
+console.assert(whatToSay(23)==='Fizz', `第${sequence}个同学应该说Fizz`)
 
 function printFullList(sequenceFrom, sequenceTo){
   for(let sequence = sequenceFrom; sequence <= sequenceTo; sequence++){
