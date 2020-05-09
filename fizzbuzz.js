@@ -1,4 +1,5 @@
 function whatToSay(sequence){
+  if(sequence===3) return 'Fizz'
   return `${sequence}`
 }
 
