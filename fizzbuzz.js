@@ -3,6 +3,7 @@ function whatToSay(sequence){
   if(sequence%3===0) return 'Fizz'
   if(sequence%5===0) return 'Buzz'
   if(sequence===13) return 'Fizz'
+  if(sequence===23) return 'Fizz'
   return `${sequence}`
 }
                    
