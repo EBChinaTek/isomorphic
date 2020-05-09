@@ -13,6 +13,7 @@ function whatToSay(sequence){
 [15, 45, 60, 75, 90].forEach(sequence=>console.assert(whatToSay(sequence)==='FizzBuzz', `第${sequence}个同学应该说FizzBuzz`));
 
 console.assert(whatToSay(51)==='Buzz', `第${sequence}个同学应该说Buzz`));
+console.assert(whatToSay(52)==='Buzz', `第${sequence}个同学应该说Buzz`));
 
 function printFullList(sequenceFrom, sequenceTo){
   for(let sequence = sequenceFrom; sequence <= sequenceTo; sequence++){
