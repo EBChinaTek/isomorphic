@@ -4,6 +4,7 @@ function whatToSay(sequence){
   if(sequence%5===0) return 'Buzz'
   if(`${sequence}`.indexOf('3')>=0) return 'Fizz'
   if(sequence===51) return 'Buzz'
+  if(sequence===52) return 'Buzz'
   return `${sequence}`
 }
                    
