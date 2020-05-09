@@ -1,6 +1,7 @@
 function whatToSay(sequence){
+  const devisibleByThree = sequence%3===0
   if(sequence%15===0) return 'FizzBuzz'
-  if(sequence%3===0 || `${sequence}`.indexOf('3')>=0) return 'Fizz'
+  if(devisibleByThree || `${sequence}`.indexOf('3')>=0) return 'Fizz'
   if(sequence%5===0 || `${sequence}`.indexOf('5')>0) return 'Buzz'
   return `${sequence}`
 }
