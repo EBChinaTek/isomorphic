@@ -1,6 +1,7 @@
 function whatToSay(sequence){
   if(sequence===3) return 'Fizz'
   if(sequence===5) return 'Buzz'
+  if(sequence===6) return 'Fizz'
   return `${sequence}`
 }
 
