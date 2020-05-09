@@ -2,11 +2,15 @@ function divisible(dividend, divisor){
   return dividend%divisor===0
 }
 
+function contains(number, digitValue){
+  return `${number}`.indexOf(`${digitValue}`)>=0
+}
+
 function whatToSay(sequence){
   const devisibleByThree = divisible(sequence, 3)
   const divisibleByFive = divisible(sequence, 5)
-  const containsThree = `${sequence}`.indexOf('3')>=0
-  const containsFive = `${sequence}`.indexOf('5')>=0
+  const containsThree = contains(sequence, 3)
+  const containsFive = contains(sequence, 5)
   if(devisibleByThree && divisibleByFive) return 'FizzBuzz'
   if(devisibleByThree || containsThree) return 'Fizz'
   if(divisibleByFive || containsFive) return 'Buzz'
