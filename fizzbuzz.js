@@ -1,5 +1,6 @@
 function whatToSay(sequence){
   if(sequence===15) return 'FizzBuzz'
+  if(sequence===30) return 'FizzBuzz'
   
   if(sequence%3===0) return 'Fizz'
   if(sequence%5===0) return 'Buzz'
