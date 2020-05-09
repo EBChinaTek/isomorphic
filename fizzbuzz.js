@@ -1,6 +1,10 @@
+function divisible(dividend, divisor){
+  return dividend%divisor===0
+}
+
 function whatToSay(sequence){
-  const devisibleByThree = sequence%3===0
-  const divisibleByFive = sequence%5===0
+  const devisibleByThree = divisible(sequence, 3)
+  const divisibleByFive = divisible(sequence, 5)
   const containsThree = `${sequence}`.indexOf('3')>=0
   const containsFive = `${sequence}`.indexOf('5')>=0
   if(devisibleByThree && divisibleByFive) return 'FizzBuzz'
