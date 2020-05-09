@@ -1,9 +1,11 @@
 function whatToSay(sequence){
   const devisibleByThree = sequence%3===0
   const divisibleByFive = sequence%5===0
+  const containsThree = `${sequence}`.indexOf('3')>=0
+  
   if(devisibleByThree && divisibleByFive) return 'FizzBuzz'
-  if(devisibleByThree || `${sequence}`.indexOf('3')>=0) return 'Fizz'
-  if(divisibleByFive || `${sequence}`.indexOf('5')>0) return 'Buzz'
+  if(devisibleByThree || containsThree) return 'Fizz'
+  if(divisibleByFive || `${sequence}`.indexOf('5')>=0) return 'Buzz'
   return `${sequence}`
 }
                    
