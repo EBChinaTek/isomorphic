@@ -19,7 +19,7 @@ const fizzRules = [devisibleByThree,containsThree],
 
 function whatToSay(sequence){
   const fizzBuzz = []
-  if(devisibleByThree(sequence) || containsThree(sequence)) fizzBuzz.push('Fizz')
+  if(fizzRules.some(rule=>rule(sequence))) fizzBuzz.push('Fizz');
   if(divisibleByFive(sequence) || containsFive(sequence)) fizzBuzz.push('Buzz')
   if(fizzBuzz.length)return fizzBuzz.join('')
   return `${sequence}`
