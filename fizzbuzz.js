@@ -14,16 +14,15 @@ const containsThree = sequence=> contains(sequence, 3)
 const divisibleByFive = sequence=> divisible(sequence, 5)
 const containsFive = sequence=> contains(sequence, 5)
 
-const buzzRules = [divisibleByFive, containsFive];
-
 const rules = {
-  'Fizz': [devisibleByThree,containsThree]
-}
+  'Fizz': [devisibleByThree,containsThree],
+  'Buzz': [divisibleByFive, containsFive],
+};
 
 function whatToSay(sequence){
   const fizzBuzz = []
   if(rules['Fizz'].some(rule=>rule(sequence))) fizzBuzz.push('Fizz');
-  if(buzzRules.some(rule=>rule(sequence))) fizzBuzz.push('Buzz');
+  if(rules['Buzz'].some(rule=>rule(sequence))) fizzBuzz.push('Buzz');
   return fizzBuzz.join('') || `${sequence}`
 }
                    
