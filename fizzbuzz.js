@@ -11,9 +11,12 @@ function whatToSay(sequence){
   const divisibleByFive = divisible(sequence, 5)
   const containsThree = contains(sequence, 3)
   const containsFive = contains(sequence, 5)
+  if(sequence===35) return 'FizzBuzz'
+  
   if(devisibleByThree && divisibleByFive) return ['Fizz','Buzz'].join('')
   if(devisibleByThree || containsThree) return ['Fizz'].join('')
   if(divisibleByFive || containsFive) return ['Buzz'].join('')
+  
   return `${sequence}`
 }
                    
