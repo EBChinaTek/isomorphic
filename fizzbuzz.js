@@ -16,8 +16,8 @@ const containsFive = sequence=> contains(sequence, 5)
 
 function whatToSay(sequence){
   const fizzBuzz = []
-  if(devisibleByThree() || containsThree()) fizzBuzz.push('Fizz')
-  if(divisibleByFive() || containsFive()) fizzBuzz.push('Buzz')
+  if(devisibleByThree(sequence) || containsThree(sequence)) fizzBuzz.push('Fizz')
+  if(divisibleByFive(sequence) || containsFive(sequence)) fizzBuzz.push('Buzz')
   if(fizzBuzz.length)return fizzBuzz.join('')
   return `${sequence}`
 }
