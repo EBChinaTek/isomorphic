@@ -14,6 +14,9 @@ const containsThree = sequence=> contains(sequence, 3)
 const divisibleByFive = sequence=> divisible(sequence, 5)
 const containsFive = sequence=> contains(sequence, 5)
 
+const fizzRules = [devisibleByThree,containsThree],
+      buzzRules = [divisibleByFive, containsFive]
+
 function whatToSay(sequence){
   const fizzBuzz = []
   if(devisibleByThree(sequence) || containsThree(sequence)) fizzBuzz.push('Fizz')
