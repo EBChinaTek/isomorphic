@@ -21,8 +21,7 @@ function whatToSay(sequence){
   const fizzBuzz = []
   if(fizzRules.some(rule=>rule(sequence))) fizzBuzz.push('Fizz');
   if(buzzRules.some(rule=>rule(sequence))) fizzBuzz.push('Buzz');
-  if(fizzBuzz.length)return fizzBuzz.join('')
-  return `${sequence}`
+  return fizzBuzz.join('') || `${sequence}`
 }
                    
 [1,2,4,7,8,11,14,16].forEach(sequence=>console.assert(whatToSay(sequence)===`${sequence}`, `第${sequence}个同学应该说${sequence}`));
