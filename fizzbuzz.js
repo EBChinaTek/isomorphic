@@ -7,16 +7,16 @@ function contains(number, digitValue){
   return `${number}`.indexOf(`${digitValue}`)>=0
 }
 
-
 console.assert(contains(51, 5))
 
+const devisibleByThree = sequence => divisible(sequence, 3)
+
 function whatToSay(sequence){
-  const devisibleByThree = divisible(sequence, 3)
   const divisibleByFive = divisible(sequence, 5)
   const containsThree = contains(sequence, 3)
   const containsFive = contains(sequence, 5)
   const fizzBuzz = []
-  if(devisibleByThree || containsThree) fizzBuzz.push('Fizz')
+  if(devisibleByThree() || containsThree) fizzBuzz.push('Fizz')
   if(divisibleByFive || containsFive) fizzBuzz.push('Buzz')
   if(fizzBuzz.length)return fizzBuzz.join('')
   return `${sequence}`
