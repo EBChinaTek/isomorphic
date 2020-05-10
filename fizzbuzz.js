@@ -21,8 +21,9 @@ const rules = {
 
 function whatToSay(sequence){
   const fizzBuzz = []
-  if(rules['Fizz'].some(rule=>rule(sequence))) fizzBuzz.push('Fizz');
-  if(rules['Buzz'].some(rule=>rule(sequence))) fizzBuzz.push('Buzz');
+  for(let word in rules){
+    if(rules[word].some(rule=>rule(sequence))) fizzBuzz.push(word);
+  }
   return fizzBuzz.join('') || `${sequence}`
 }
                    
