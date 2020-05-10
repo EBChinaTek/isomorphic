@@ -10,13 +10,14 @@ function contains(number, digitValue){
 console.assert(contains(51, 5))
 
 const devisibleByThree = sequence => divisible(sequence, 3)
+const containsThree = sequence=> contains(sequence, 3)
+
 
 function whatToSay(sequence){
   const divisibleByFive = divisible(sequence, 5)
-  const containsThree = contains(sequence, 3)
   const containsFive = contains(sequence, 5)
   const fizzBuzz = []
-  if(devisibleByThree() || containsThree) fizzBuzz.push('Fizz')
+  if(devisibleByThree() || containsThree()) fizzBuzz.push('Fizz')
   if(divisibleByFive || containsFive) fizzBuzz.push('Buzz')
   if(fizzBuzz.length)return fizzBuzz.join('')
   return `${sequence}`
